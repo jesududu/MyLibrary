@@ -30,4 +30,5 @@ func loadKC(key:String) -> String? {
 func deleteKC(key:String) {
     let keychain = Keychain(service: Constants.myKeychain)
     keychain[key] = nil
+    return keychain[key] == nil
 }
